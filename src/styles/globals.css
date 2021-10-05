@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .link {
+    @apply cursor-pointer hover:underline;
+  }
+
+  .button {
+    @apply p-2 text-xs md:text-sm bg-gradient-to-b from-yellow-200 to-yellow-400 border border-yellow-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 active:from-yellow-500;
+  }
+}
+
+@layer utilities {
+  .filter-contaienr {
+    background-color: rgb(243, 243, 243);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    padding: 0px 10px;
+    width: auto;
+    height: 100%;
+  }
+
+  .filter-container:hover {
+    background-color: lightgray;
+  }
+
+  .filter {
+    background-color: inherit;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 50%;
+    height: 100%;
+  }
+
+  @variants hover, focus,focus-within {
+    .filter-container {
+      background-color: lightgray;
+    }
+
+    .filter {
+      outline: none;
+      box-shadow: none;
+    }
+
+    .search-shadow {
+      box-shadow: 0 0 0 3px #f90;
+    }
+  }
+}
