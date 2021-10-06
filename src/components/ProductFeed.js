@@ -18,7 +18,7 @@ function ProductFeed({ products }) {
         ))}
       <img
         src="https://links.papareact.com/dyz"
-        className="md:col-span-4 mx-auto"
+        className="md:col-span-4 mx-auto rounded-md shadow-lg"
         alt=""
       />
 
